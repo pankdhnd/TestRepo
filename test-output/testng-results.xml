@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="13626" started-at="2016-08-10T17:50:25Z" finished-at="2016-08-10T17:50:38Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="13626" started-at="2016-08-10T17:50:25Z" finished-at="2016-08-10T17:50:38Z">
+      <class name="commonLibs.mainClass">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:commonLibs.mainClass@25084a1e]" name="beforeTest" is-config="true" duration-ms="6" started-at="2016-08-10T23:20:25Z" finished-at="2016-08-10T23:20:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="verifyPageTitle()[pri:0, instance:commonLibs.mainClass@25084a1e]" name="verifyPageTitle" duration-ms="13611" started-at="2016-08-10T23:20:25Z" finished-at="2016-08-10T23:20:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPageTitle -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:commonLibs.mainClass@25084a1e]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-08-10T23:20:38Z" finished-at="2016-08-10T23:20:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- commonLibs.mainClass -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

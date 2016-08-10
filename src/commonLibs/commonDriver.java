@@ -1,0 +1,110 @@
+package commonLibs;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class commonDriver {
+private WebDriver wDriver;
+private long pageLoadTimeOut = 60l;
+private long elementDetectionTimeOut = 60l;
+
+public commonDriver(WebDriver tempDriver){
+	this.wDriver = tempDriver;
+}
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+public void setpageLoadTimeOut(long timeOut){
+	this.pageLoadTimeOut = timeOut;
+}
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+public void setElementDetectionTimeout(long timeOut){
+	this.elementDetectionTimeOut = timeOut;
+}
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+public void setText(WebElement element, String Text){
+	try {
+		element.sendKeys(Text);	
+	} catch (Exception e) {
+		System.out.println("commonLibs()->setText()-> "+e.getMessage());
+	}	
+}
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+public String getTitle(){
+	try {
+<<<<<<< .mine
+		return wDriver.getTitle();
+		
+=======
+		return wDriver.getTitle();		
+>>>>>>> .r57
+	} catch (Exception e) {
+		System.out.println("Could not get title of curret page; here is some more detail: ");
+	    e.printStackTrace();
+	}
+	return "commonDriver()->getTitle()->ERROR";
+}
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+public void openURL(String sURL){
+	if (sURL.isEmpty()) {
+	     sURL = "about:blank";
+	    }
+	wDriver.manage().window().maximize();
+    wDriver.manage().deleteAllCookies();
+    wDriver.manage().timeouts().pageLoadTimeout(pageLoadTimeOut, TimeUnit.SECONDS); //set page load time out
+    wDriver.manage().timeouts().implicitlyWait(elementDetectionTimeOut, TimeUnit.SECONDS); // set implicit wait
+	wDriver.get(sURL);
+}
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+public void click(WebElement element){
+	try {
+		element.click();	
+	} catch (Exception e) {
+		System.out.println("commonLibs()->click()-> "+e.getMessage());
+	}	
+}
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
+public void waitTillElementVisible(By oBy, long timeOut) {
+ try {
+  WebDriverWait oWait = new WebDriverWait(wDriver, timeOut);
+  oWait.until(ExpectedConditions.visibilityOfElementLocated(oBy));
+ } catch (Exception e) {
+  System.out.println("Error while waiting for element to be visible; here is some more detail: ");
+  e.printStackTrace();
+ }
+}
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
+public void waitTillElementClickable(By oBy, long timeOut) {
+ try {	 
+  WebDriverWait oWait = new WebDriverWait(wDriver, timeOut);
+  oWait.until(ExpectedConditions.elementToBeClickable(oBy));
+ } catch (Exception e) {
+  System.out.println("commonDriver()->waitTillElementClickable()->Error while waiting for element to be clickable; here is some more detail: ");
+  e.printStackTrace();
+ }
+}
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
+public void implicitlyWait(int Seconds){
+	wDriver.manage().timeouts().implicitlyWait(Seconds, TimeUnit.SECONDS);
+}
+
+
+
+
+
+
+}
