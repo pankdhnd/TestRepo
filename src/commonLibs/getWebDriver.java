@@ -14,9 +14,7 @@ public class getWebDriver {
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------	
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------	
 public WebDriver getDriver(String sBrowserType) { 
-	sBrowserType = sBrowserType.trim();
-	//   sURL = sURL.trim();
-	  
+	sBrowserType = sBrowserType.trim();	  
 	   try {
 		  
 	    if (sBrowserType.equalsIgnoreCase("firefox") || sBrowserType.equalsIgnoreCase("ff") || sBrowserType.equalsIgnoreCase("mozilla")) {

@@ -5,6 +5,10 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -39,12 +43,9 @@ public void setText(WebElement element, String Text){
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 public String getTitle(){
 	try {
-<<<<<<< .mine
-		return wDriver.getTitle();
-		
-=======
+
 		return wDriver.getTitle();		
->>>>>>> .r57
+
 	} catch (Exception e) {
 		System.out.println("Could not get title of curret page; here is some more detail: ");
 	    e.printStackTrace();
@@ -72,8 +73,7 @@ public void click(WebElement element){
 		System.out.println("commonLibs()->click()-> "+e.getMessage());
 	}	
 }
-//---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
-//---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
 //------------------------------------------------------------------------------------------------------------------------------------------------------//
 //------------------------------------------------------------------------------------------------------------------------------------------------------//
 public void waitTillElementVisible(By oBy, long timeOut) {
@@ -101,6 +101,50 @@ public void waitTillElementClickable(By oBy, long timeOut) {
 public void implicitlyWait(int Seconds){
 	wDriver.manage().timeouts().implicitlyWait(Seconds, TimeUnit.SECONDS);
 }
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------//	
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
+public void openBrowser(String sBrowserType) {
+ sBrowserType = sBrowserType.trim();
+// sURL = sURL.trim();
+ try {
+
+  if (sBrowserType.equalsIgnoreCase("firefox") || sBrowserType.equalsIgnoreCase("ff") || sBrowserType.equalsIgnoreCase("mozilla")) {
+   wDriver = new FirefoxDriver();
+  } else if (sBrowserType.equalsIgnoreCase("chrome") || sBrowserType.equalsIgnoreCase("google chrome") || sBrowserType.equalsIgnoreCase("gc")) {
+   System.setProperty("webdriver.chrome.driver", "D:\\webdrivers\\chromedriver.exe");
+   wDriver = new ChromeDriver();
+
+  } else if (sBrowserType.equalsIgnoreCase("ie") || sBrowserType.equalsIgnoreCase("internet explorer")) {
+   System.setProperty("webdriver.ie.driver", "D:\\webdrivers\\IEDriverServer.exe");
+   wDriver = new InternetExplorerDriver();
+  } else if (sBrowserType.equalsIgnoreCase("opera")){
+  	System.setProperty("webdriver.opera.driver", "D:\\webdrivers\\operadriver.exe");
+      wDriver = new OperaDriver();
+  } else {
+   throw new Exception("Invalid browser type " + sBrowserType);
+   //System.out.println("Invalid driver type "+sBrowserType+" Setting default browser to Firefox...");
+   //wDriver = new FirefoxDriver();
+  }
+  wDriver.manage().window().maximize();
+  wDriver.manage().deleteAllCookies();
+  wDriver.manage().timeouts().pageLoadTimeout(pageLoadTimeOut, TimeUnit.SECONDS); //set page load time out
+  wDriver.manage().timeouts().implicitlyWait(elementDetectionTimeOut, TimeUnit.SECONDS); // set implicit wait
+
+//  if (sURL.isEmpty()) {
+//   sURL = "about:blank";
+//  }
+//  wDriver.get(sURL);
+ } catch (Exception e) {
+  System.out.println("Could not open browser; here is some more detail: ");
+  e.printStackTrace();
+ }
+
+ } //END openBrowser
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
 
 
 
