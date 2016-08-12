@@ -50,20 +50,23 @@ public class AppWordPress2 {
     
    
     @Test  (dataProvider = "getBrowserType") 
-    public void prepare(String browserType){    	
+    public void prepare(String browserType, String sURL){    	
     	System.out.println("Inside dataprovider");
-    	 oExcelDriver.openExcelSheet("D:\\Framework\\InputData\\InputTestData.xlsx");
+    	// oExcelDriver.openExcelSheet("D:\\selenium\\Framework\\InputData\\InputTestData.xlsx");
     	//eDriver.openExcelSheet("D:\\Framework\\InputData\\InputTestData.xlsx");
-    	doMethod.openBrowser(browserType);    	
+    	doMethod.openBrowser(browserType,sURL);    	
     }
     
     @DataProvider (name = "getBrowserType")
-    public Object[][] data()    {    	        	
-    	return new Object [][] = {{ "Cat" }, { "Dog" } };
-//    	Object[][] browserType = new Object[1][0];
-//    	oExcelDriver.openExcelSheet("D:\\Framework\\InputData\\InputTestData.xlsx");
-//    	browserType[1][0] = oExcelDriver.getCellData("prepare", 1, 2);    	
-//    	return browserType;
+    public Object [][] browserType()    {    	        	
+    	String excelSheetName = "prepare";
+    	Object[][] browserType = new Object[1][2];
+    	oExcelDriver.openExcelSheet("D:\\selenium\\Framework\\InputData\\InputTestData.xlsx");
+    	browserType[0][0] = oExcelDriver.getCellData(excelSheetName, 1, 2);
+    	browserType[0][1] = oExcelDriver.getCellData(excelSheetName, 2, 2);
+    	System.out.println(browserType[0][0]);
+    	System.out.println(browserType[0][1]);
+    	return browserType;
     }
 //    @BeforeTest
 //	public void openBrowser(String browserType){

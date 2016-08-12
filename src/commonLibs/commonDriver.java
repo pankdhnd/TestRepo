@@ -104,9 +104,9 @@ public void implicitlyWait(int Seconds){
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------//	
 //------------------------------------------------------------------------------------------------------------------------------------------------------//
-public void openBrowser(String sBrowserType) {
+public void openBrowser(String sBrowserType, String sURL) {
  sBrowserType = sBrowserType.trim();
-// sURL = sURL.trim();
+ sURL = sURL.trim();
  try {
 
   if (sBrowserType.equalsIgnoreCase("firefox") || sBrowserType.equalsIgnoreCase("ff") || sBrowserType.equalsIgnoreCase("mozilla")) {
@@ -131,10 +131,10 @@ public void openBrowser(String sBrowserType) {
   wDriver.manage().timeouts().pageLoadTimeout(pageLoadTimeOut, TimeUnit.SECONDS); //set page load time out
   wDriver.manage().timeouts().implicitlyWait(elementDetectionTimeOut, TimeUnit.SECONDS); // set implicit wait
 
-//  if (sURL.isEmpty()) {
-//   sURL = "about:blank";
-//  }
-//  wDriver.get(sURL);
+  if (sURL.isEmpty()) {
+   sURL = "about:blank";
+  }
+  wDriver.get(sURL);
  } catch (Exception e) {
   System.out.println("Could not open browser; here is some more detail: ");
   e.printStackTrace();
