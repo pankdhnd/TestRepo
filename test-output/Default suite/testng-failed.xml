@@ -5,6 +5,7 @@
     <classes>
       <class name="commonLibs.AppWordPress2">
         <methods>
+          <include name="verifyPageTitle"/>
           <include name="prepare"/>
         </methods>
       </class> <!-- commonLibs.AppWordPress2 -->

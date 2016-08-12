@@ -13,12 +13,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class commonDriver {
-private WebDriver wDriver;
+private static WebDriver wDriver;
 private long pageLoadTimeOut = 60l;
 private long elementDetectionTimeOut = 60l;
 
 public commonDriver(WebDriver tempDriver){
-	this.wDriver = tempDriver;
+	wDriver = tempDriver;
 }
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
@@ -54,11 +54,12 @@ public String getTitle(){
 }
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
-public void openURL(String sURL){
+public void openURL(String sURL){	
 	if (sURL.isEmpty()) {
 	     sURL = "about:blank";
-	    }
+	    }		
 	wDriver.manage().window().maximize();
+	System.out.println("After wDriver");
     wDriver.manage().deleteAllCookies();
     wDriver.manage().timeouts().pageLoadTimeout(pageLoadTimeOut, TimeUnit.SECONDS); //set page load time out
     wDriver.manage().timeouts().implicitlyWait(elementDetectionTimeOut, TimeUnit.SECONDS); // set implicit wait
@@ -68,9 +69,13 @@ public void openURL(String sURL){
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 public void click(WebElement element){
 	try {
+		if(wDriver == null){
+			System.out.println("Webdriver is null");
+		}
 		element.click();	
 	} catch (Exception e) {
-		System.out.println("commonLibs()->click()-> "+e.getMessage());
+		System.out.println("commonLibs()->click()-> ");
+		e.printStackTrace();
 	}	
 }
 
