@@ -5,10 +5,14 @@
     <classes>
       <class name="commonLibs.AppWordPress2">
         <methods>
-          <include name="verifyPageTitle"/>
           <include name="prepare"/>
         </methods>
       </class> <!-- commonLibs.AppWordPress2 -->
+      <class name="commonLibs.NewTest">
+        <methods>
+          <include name="clickPostsButton"/>
+        </methods>
+      </class> <!-- commonLibs.NewTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

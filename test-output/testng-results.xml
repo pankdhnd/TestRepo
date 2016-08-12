@@ -1,45 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="2" passed="1">
+<testng-results skipped="0" failed="1" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12661" started-at="2016-08-12T08:57:22Z" finished-at="2016-08-12T08:57:34Z">
+  <suite name="Default suite" duration-ms="16493" started-at="2016-08-12T09:20:19Z" finished-at="2016-08-12T09:20:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12661" started-at="2016-08-12T08:57:22Z" finished-at="2016-08-12T08:57:34Z">
+    <test name="Default test" duration-ms="16493" started-at="2016-08-12T09:20:19Z" finished-at="2016-08-12T09:20:35Z">
       <class name="commonLibs.AppWordPress2">
-        <test-method status="PASS" signature="prepare()[pri:0, instance:commonLibs.AppWordPress2@4678c730]" name="prepare" is-config="true" duration-ms="10735" started-at="2016-08-12T14:27:22Z" finished-at="2016-08-12T14:27:32Z">
+        <test-method status="PASS" signature="prepare()[pri:0, instance:commonLibs.AppWordPress2@6767c1fc]" name="prepare" is-config="true" duration-ms="11546" started-at="2016-08-12T14:50:19Z" finished-at="2016-08-12T14:50:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepare -->
-        <test-method status="PASS" signature="Login2(java.lang.String, java.lang.String)[pri:1, instance:commonLibs.AppWordPress2@4678c730]" name="Login2" duration-ms="1880" started-at="2016-08-12T14:27:32Z" data-provider="getLoginDetails" finished-at="2016-08-12T14:27:34Z">
+        <test-method status="PASS" signature="Login2(java.lang.String, java.lang.String)[pri:1, instance:commonLibs.AppWordPress2@6767c1fc]" name="Login2" duration-ms="4887" started-at="2016-08-12T14:50:30Z" data-provider="getLoginDetails" finished-at="2016-08-12T14:50:35Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[pankaj2]]>
+                <![CDATA[admin]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Android@123]]>
+                <![CDATA[demo123]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login2 -->
-        <test-method status="FAIL" signature="verifyPageTitle()[pri:2, instance:commonLibs.AppWordPress2@4678c730]" name="verifyPageTitle" duration-ms="22" started-at="2016-08-12T14:27:34Z" finished-at="2016-08-12T14:27:34Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [WordPress Demo Install › Log In] but found [Dashboard ‹ WordPress Demo Install — WordPress]]]>
-            </message>
+        <test-method status="PASS" signature="verifyPageTitle()[pri:2, instance:commonLibs.AppWordPress2@6767c1fc]" name="verifyPageTitle" duration-ms="23" started-at="2016-08-12T14:50:35Z" finished-at="2016-08-12T14:50:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPageTitle -->
+      </class> <!-- commonLibs.AppWordPress2 -->
+      <class name="commonLibs.NewTest">
+        <test-method status="FAIL" signature="clickPostsButton()[pri:0, instance:commonLibs.NewTest@29ee9faa]" name="clickPostsButton" duration-ms="2" started-at="2016-08-12T14:50:35Z" finished-at="2016-08-12T14:50:35Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [WordPress Demo Install › Log In] but found [Dashboard ‹ WordPress Demo Install — WordPress]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:178)
-	at org.testng.Assert.assertEquals(Assert.java:188)
-	at commonLibs.AppWordPress2.verifyPageTitle(AppWordPress2.java:101)
+              <![CDATA[java.lang.NullPointerException
+	at commonLibs.NewTest.clickPostsButton(NewTest.java:22)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -66,11 +64,11 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyPageTitle -->
-      </class> <!-- commonLibs.AppWordPress2 -->
+        </test-method> <!-- clickPostsButton -->
+      </class> <!-- commonLibs.NewTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\pandha1\AppData\Local\Temp\testng-eclipse--2027874981\testng-customsuite.xml</span>
+                    <span>C:\Users\pandha1\git\TestRepo\src\Test.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,7 +101,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="commonLibs.AppWordPress2" hash-for-method="verifyPageTitle">verifyPageTitle</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="commonLibs.NewTest" hash-for-method="clickPostsButton">clickPostsButton</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -115,7 +115,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="commonLibs.AppWordPress2" hash-for-method="Login2(pankaj2, Android@123)">Login2(pankaj2, Android@123)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="commonLibs.AppWordPress2" hash-for-method="Login2(admin, demo123)">Login2(admin, demo123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="commonLibs.AppWordPress2" hash-for-method="verifyPageTitle">verifyPageTitle</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -133,21 +138,16 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">commonLibs.AppWordPress2</span>
+              <span class="class-name">commonLibs.NewTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyPageTitle">
-                  </a> <!-- verifyPageTitle -->
-                  <span class="method-name">verifyPageTitle</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [WordPress Demo Install › Log In] but found [Dashboard ‹ WordPress Demo Install — WordPress]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:178)
-	at org.testng.Assert.assertEquals(Assert.java:188)
-	at commonLibs.AppWordPress2.verifyPageTitle(AppWordPress2.java:101)
+                  <a name="clickPostsButton">
+                  </a> <!-- clickPostsButton -->
+                  <span class="method-name">clickPostsButton</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at commonLibs.NewTest.clickPostsButton(NewTest.java:22)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -186,10 +186,17 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Login2(pankaj2, Android@123)">
-                  </a> <!-- Login2(pankaj2, Android@123) -->
+                  <a name="Login2(admin, demo123)">
+                  </a> <!-- Login2(admin, demo123) -->
                   <span class="method-name">Login2</span>
-                  <span class="parameters">(pankaj2, Android@123)</span>
+                  <span class="parameters">(admin, demo123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPageTitle">
+                  </a> <!-- verifyPageTitle -->
+                  <span class="method-name">verifyPageTitle</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -197,7 +204,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\pandha1\AppData\Local\Temp\testng-eclipse--2027874981\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\pandha1\git\TestRepo\src\Test.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -207,6 +214,7 @@
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;commonLibs.AppWordPress2&quot;/&gt;
+      &lt;class name=&quot;commonLibs.NewTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -220,7 +228,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">Default test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -246,20 +254,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Login2')
 data.setCell(0, 2, 'commonLibs.AppWordPress2')
-data.setCell(0, 3, 1880);
+data.setCell(0, 3, 4887);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyPageTitle')
 data.setCell(1, 2, 'commonLibs.AppWordPress2')
-data.setCell(1, 3, 22);
+data.setCell(1, 3, 23);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'clickPostsButton')
+data.setCell(2, 2, 'commonLibs.NewTest')
+data.setCell(2, 3, 2);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -291,14 +303,21 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">Login2(pankaj2, Android@123)</span>
-                <span class="method-start">10749 ms</span>
+                <span class="method-name">Login2(admin, demo123)</span>
+                <span class="method-start">11560 ms</span>
               </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyPageTitle</span>
+                <span class="method-start">16449 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">commonLibs.NewTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">verifyPageTitle</span>
-                <span class="method-start">12631 ms</span>
+                <span class="method-name">clickPostsButton</span>
+                <span class="method-start">16476 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
