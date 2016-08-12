@@ -3,16 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="commonLibs.AppWordPress2">
+      <class name="testCases.testCase001">
         <methods>
           <include name="prepare"/>
+          <include name="f"/>
         </methods>
-      </class> <!-- commonLibs.AppWordPress2 -->
-      <class name="commonLibs.NewTest">
-        <methods>
-          <include name="clickPostsButton"/>
-        </methods>
-      </class> <!-- commonLibs.NewTest -->
+      </class> <!-- testCases.testCase001 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

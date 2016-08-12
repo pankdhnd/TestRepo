@@ -58,8 +58,7 @@ public void openURL(String sURL){
 	if (sURL.isEmpty()) {
 	     sURL = "about:blank";
 	    }		
-	wDriver.manage().window().maximize();
-	System.out.println("After wDriver");
+	wDriver.manage().window().maximize();	
     wDriver.manage().deleteAllCookies();
     wDriver.manage().timeouts().pageLoadTimeout(pageLoadTimeOut, TimeUnit.SECONDS); //set page load time out
     wDriver.manage().timeouts().implicitlyWait(elementDetectionTimeOut, TimeUnit.SECONDS); // set implicit wait

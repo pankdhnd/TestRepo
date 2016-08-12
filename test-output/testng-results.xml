@@ -1,74 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="3" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16493" started-at="2016-08-12T09:20:19Z" finished-at="2016-08-12T09:20:35Z">
+  <suite name="Default suite" duration-ms="12085" started-at="2016-08-12T11:42:46Z" finished-at="2016-08-12T11:42:58Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16493" started-at="2016-08-12T09:20:19Z" finished-at="2016-08-12T09:20:35Z">
-      <class name="commonLibs.AppWordPress2">
-        <test-method status="PASS" signature="prepare()[pri:0, instance:commonLibs.AppWordPress2@6767c1fc]" name="prepare" is-config="true" duration-ms="11546" started-at="2016-08-12T14:50:19Z" finished-at="2016-08-12T14:50:30Z">
+    <test name="Default test" duration-ms="12085" started-at="2016-08-12T11:42:46Z" finished-at="2016-08-12T11:42:58Z">
+      <class name="testCases.testCase001">
+        <test-method status="PASS" signature="prepare()[pri:0, instance:testCases.testCase001@59fd97a8]" name="prepare" is-config="true" duration-ms="2925" started-at="2016-08-12T17:12:46Z" finished-at="2016-08-12T17:12:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepare -->
-        <test-method status="PASS" signature="Login2(java.lang.String, java.lang.String)[pri:1, instance:commonLibs.AppWordPress2@6767c1fc]" name="Login2" duration-ms="4887" started-at="2016-08-12T14:50:30Z" data-provider="getLoginDetails" finished-at="2016-08-12T14:50:35Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[demo123]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="f()[pri:0, instance:testCases.testCase001@59fd97a8]" name="f" duration-ms="9138" started-at="2016-08-12T17:12:49Z" finished-at="2016-08-12T17:12:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Login2 -->
-        <test-method status="PASS" signature="verifyPageTitle()[pri:2, instance:commonLibs.AppWordPress2@6767c1fc]" name="verifyPageTitle" duration-ms="23" started-at="2016-08-12T14:50:35Z" finished-at="2016-08-12T14:50:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyPageTitle -->
-      </class> <!-- commonLibs.AppWordPress2 -->
-      <class name="commonLibs.NewTest">
-        <test-method status="FAIL" signature="clickPostsButton()[pri:0, instance:commonLibs.NewTest@29ee9faa]" name="clickPostsButton" duration-ms="2" started-at="2016-08-12T14:50:35Z" finished-at="2016-08-12T14:50:35Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at commonLibs.NewTest.clickPostsButton(NewTest.java:22)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickPostsButton -->
-      </class> <!-- commonLibs.NewTest -->
+        </test-method> <!-- f -->
+      </class> <!-- testCases.testCase001 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
