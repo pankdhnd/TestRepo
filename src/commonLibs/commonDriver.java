@@ -9,11 +9,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class commonDriver {
-private static WebDriver wDriver;
+private static WebDriver wDriver = getWebDriver.wDriver;
 private long pageLoadTimeOut = 60l;
 private long elementDetectionTimeOut = 60l;
 
@@ -54,6 +55,17 @@ public String getTitle(){
 }
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+public boolean isVisible(WebElement Element) {
+	   try {
+	    return Element.isDisplayed();
+	   } catch (Exception e) {
+	    System.out.println("Could not determine element visibility; here is some more detail: ");
+	    e.printStackTrace();
+	    return false;
+	   } 
+}
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 public void openURL(String sURL){	
 	if (sURL.isEmpty()) {
 	     sURL = "about:blank";
@@ -67,17 +79,23 @@ public void openURL(String sURL){
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 public void click(WebElement element){
-	try {
-		if(wDriver == null){
-			System.out.println("Webdriver is null");
-		}
+	try {	
 		element.click();	
 	} catch (Exception e) {
 		System.out.println("commonLibs()->click()-> ");
 		e.printStackTrace();
 	}	
 }
-
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
+public void clear(WebElement Element){
+	try {	
+		Element.clear();	
+	} catch (Exception e) {
+		System.out.println("commonLibs()->click()-> ");
+		e.printStackTrace();
+	}	
+}
 //------------------------------------------------------------------------------------------------------------------------------------------------------//
 //------------------------------------------------------------------------------------------------------------------------------------------------------//
 public void waitTillElementVisible(By oBy, long timeOut) {

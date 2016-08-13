@@ -55,7 +55,7 @@ public class AppWordPress2 {
     	String browserType = oExcelDriver.getCellData(excelSheetName, 1, 2);
     	String sURL = oExcelDriver.getCellData(excelSheetName, 2, 2);
     	//initialize WebDiver and open browser    	
-    	this.wDriver = driverGetter.getDriver(browserType);
+//    	this.wDriver = driverGetter.getDriver(browserType);
     	//initialize Pagefactory
     	PageFactory.initElements(this.wDriver, this);
     	//initialize commonDriver

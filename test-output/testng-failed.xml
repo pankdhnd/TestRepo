@@ -5,8 +5,8 @@
     <classes>
       <class name="testCases.testCase001">
         <methods>
+          <include name="testCase001_LoginAndVerifications"/>
           <include name="prepare"/>
-          <include name="f"/>
         </methods>
       </class> <!-- testCases.testCase001 -->
     </classes>

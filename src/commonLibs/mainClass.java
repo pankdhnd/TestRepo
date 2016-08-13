@@ -15,8 +15,8 @@ public class mainClass {
 	static AppWordPress2 apress2;
 	
 	public mainClass(){
-		mainWebDriver = driverGetter.getDriver("opera");
-		apress = new appWordpress(mainWebDriver);	
+//		mainWebDriver = driverGetter.getDriver("opera");
+//		apress = new appWordpress(mainWebDriver);	
 		//apress.Login2("admin", "demo123");
 	//	apress.verifyPageTitle();		
 	//	apress2 = new AppWordPress2(mainWebDriver);

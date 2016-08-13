@@ -9,14 +9,14 @@ public class driverClass {
 	static appWordpress apress;
 	
 	public static void main(String[] args) {
-		mainWebDriver = driverGetter.getDriver("opera");
-		apress = new appWordpress(mainWebDriver);
-		
-		
-	apress.Login("admin", "demo123$");
-		
-		
-	}
+//		mainWebDriver = driverGetter.getDriver("opera");
+//		apress = new appWordpress(mainWebDriver);
+//		
+//		
+//	apress.Login("admin", "demo123$");
+//		
+//		
+		}
 	
 	public void main()
 	{ 

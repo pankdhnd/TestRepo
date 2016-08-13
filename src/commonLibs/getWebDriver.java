@@ -8,12 +8,12 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
 public class getWebDriver {
-	public WebDriver wDriver;
+	public static WebDriver wDriver;
 	
 	
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------	
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------	
-public WebDriver getDriver(String sBrowserType) { 
+public static WebDriver initiateDriver(String sBrowserType) { 
 	sBrowserType = sBrowserType.trim();	  
 	   try {
 		  
