@@ -443,3 +443,49 @@
 2016-08-13 14:13:18,860 INFO  [Log] Strting actual tets case execution 
 2016-08-13 14:13:27,574 INFO  [Log] Inside Login, getting username and password for login 
 2016-08-13 14:13:27,725 INFO  [Log] clicking Login button 
+2016-08-13 14:14:15,823 INFO  [Log] **************************************************************************************** 
+2016-08-13 14:14:15,823 INFO  [Log] **************************************************************************************** 
+2016-08-13 14:14:15,823 INFO  [Log] $$$$$$$$$$$$$$$$$$$$$                 testCase001_LoginAndVerifications       $$$$$$$$$$$$$$$$$$$$$$$$$ 
+2016-08-13 14:14:15,823 INFO  [Log] **************************************************************************************** 
+2016-08-13 14:14:15,823 INFO  [Log] **************************************************************************************** 
+2016-08-13 14:14:15,823 INFO  [Log] inside BeforeText, configuring elements... 
+2016-08-13 14:14:15,823 INFO  [Log] Getting WebDriver instance 
+2016-08-13 14:14:17,127 INFO  [Log] WebDriver intance received, now pasing to appWordPres3 
+2016-08-13 14:14:17,148 INFO  [Log] Strting actual tets case execution 
+2016-08-13 14:14:31,420 INFO  [Log] Inside Login, getting username and password for login 
+2016-08-13 14:14:31,572 INFO  [Log] clicking Login button 
+2016-08-13 14:27:43,121 INFO  [Log] **************************************************************************************** 
+2016-08-13 14:27:43,121 INFO  [Log] **************************************************************************************** 
+2016-08-13 14:27:43,121 INFO  [Log] $$$$$$$$$$$$$$$$$$$$$                 testCase001_LoginAndVerifications       $$$$$$$$$$$$$$$$$$$$$$$$$ 
+2016-08-13 14:27:43,121 INFO  [Log] **************************************************************************************** 
+2016-08-13 14:27:43,121 INFO  [Log] **************************************************************************************** 
+2016-08-13 14:27:43,121 INFO  [Log] inside BeforeText, configuring elements... 
+2016-08-13 14:27:43,121 INFO  [Log] Getting WebDriver instance 
+2016-08-13 14:27:44,438 INFO  [Log] WebDriver intance received, now pasing to appWordPres3 
+2016-08-13 14:27:44,459 INFO  [Log] Strting actual tets case execution 
+2016-08-13 14:27:54,951 INFO  [Log] Inside Login, getting username and password for login 
+2016-08-13 14:27:55,109 INFO  [Log] clicking Login button 
+2016-08-13 14:35:00,291 INFO  [Log] **************************************************************************************** 
+2016-08-13 14:35:00,291 INFO  [Log] **************************************************************************************** 
+2016-08-13 14:35:00,291 INFO  [Log] $$$$$$$$$$$$$$$$$$$$$                 testCase001_LoginAndVerifications       $$$$$$$$$$$$$$$$$$$$$$$$$ 
+2016-08-13 14:35:00,291 INFO  [Log] **************************************************************************************** 
+2016-08-13 14:35:00,291 INFO  [Log] **************************************************************************************** 
+2016-08-13 14:35:00,291 INFO  [Log] inside BeforeText, configuring elements... 
+2016-08-13 14:35:00,291 INFO  [Log] Getting WebDriver instance 
+2016-08-13 14:35:01,651 INFO  [Log] WebDriver intance received, now pasing to appWordPres3 
+2016-08-13 14:35:01,669 INFO  [Log] Strting actual tets case execution 
+2016-08-13 14:35:13,075 INFO  [Log] Inside Login, getting username and password for login 
+2016-08-13 14:35:13,232 INFO  [Log] clicking Login button 
+2016-08-13 14:36:15,223 INFO  [Log] **************************************************************************************** 
+2016-08-13 14:36:15,224 INFO  [Log] **************************************************************************************** 
+2016-08-13 14:36:15,224 INFO  [Log] $$$$$$$$$$$$$$$$$$$$$                 testCase001_LoginAndVerifications       $$$$$$$$$$$$$$$$$$$$$$$$$ 
+2016-08-13 14:36:15,224 INFO  [Log] **************************************************************************************** 
+2016-08-13 14:36:15,224 INFO  [Log] **************************************************************************************** 
+2016-08-13 14:36:15,224 INFO  [Log] inside BeforeText, configuring elements... 
+2016-08-13 14:36:15,224 INFO  [Log] Getting WebDriver instance 
+2016-08-13 14:36:16,568 INFO  [Log] WebDriver intance received, now pasing to appWordPres3 
+2016-08-13 14:36:16,587 INFO  [Log] Strting actual tets case execution 
+2016-08-13 14:36:24,969 INFO  [Log] Inside Login, getting username and password for login 
+2016-08-13 14:36:25,127 INFO  [Log] clicking Login button 
+2016-08-13 14:36:32,186 ERROR [Log] Could not move to the specified element; here is some more detail: 
+2016-08-13 14:36:32,186 ERROR [Log] [Ljava.lang.StackTraceElement;@29a0cdb 

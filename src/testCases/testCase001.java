@@ -43,34 +43,28 @@ public class testCase001 {
     }
 	
 	
-  @Test
+  @Test (priority = 1)
   public void testCase001_LoginAndVerifications() {
 	 Log.info("Strting actual tets case execution");
 	 String ExpectedLoginPageTitle = "WordPress Demo Install › Log In";
 	  //Open URL of login page
-	  apress3.OpenURL();		  
-	  
+	  apress3.OpenURL();		  	  
 	 //Verify title for login page	 
-	 Assert.assertEquals(apress3.getPageTitle(), ExpectedLoginPageTitle);
-	  
+	 Assert.assertEquals(apress3.getPageTitle(), ExpectedLoginPageTitle);	  
 	 //Verify if username textbox is visible
-	 Assert.assertTrue(apress3.isUserTextBoxDisplayed());
-//	 
+	 Assert.assertTrue(apress3.isUserTextBoxDisplayed());//	 
 //	 //Verify if password textbox is displayed
-	 Assert.assertTrue(apress3.isPasswordTextBoxDisplayed());
-//	 
+	 Assert.assertTrue(apress3.isPasswordTextBoxDisplayed());//	 
 //	 //Verify if login button is displayed
 	 Assert.assertTrue(apress3.isLoginButtonDisplayed());
-	 apress3.Login2();
-	 //Assert
-//	  String[] tempLoginData = new String[2];
-//	  tempLoginData = testData.getLoginDetails();
-//	  apress3.Login2(tempLoginData[0], tempLoginData[1]);
-//	  apress3.verifyPageTitle();
+//	Log into the system and verify Dashboard menu of home page is visible or not	 
+	 Assert.assertTrue(apress3.Login2());
   }
   
-  
-  
+  @Test (priority = 2)
+  public void testCase002_Logout(){
+	apress3.Logout();
+  }
   
   
   

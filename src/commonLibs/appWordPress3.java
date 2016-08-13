@@ -2,19 +2,14 @@ package commonLibs;
 
 import projectUtility.Log;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.annotations.DataProvider;
+
 import org.testng.annotations.Test;
-import projectUtility.excelDriver;
 import projectUtility.dataProvider;
-import projectUtility.objectRepository;
 
 public class appWordPress3 {
 
@@ -41,6 +36,11 @@ public class appWordPress3 {
     @FindBy(xpath = "//a[contains(text(),'Dashboard')]")
     private static WebElement dashboardLink;
     
+    @FindBy(xpath = "//a[contains(text(),'Howdy, admin')]")
+    private static WebElement myAccountLink;
+    
+    @FindBy(xpath = "//a[contains(text(),'Log Out')]")
+    private static WebElement linkLogout;
         
     public appWordPress3(WebDriver tempDriver) {
            this.wDriver = tempDriver;
@@ -50,30 +50,7 @@ public class appWordPress3 {
     
      
       
-//    @BeforeTest  
-//    public void prepare(){ 
-//    	Log.info("Preparing environment before starting test case run");
-//    	//Excel sheet name where the browser type and URL are saved
-//    	String excelSheetName = "prepare";             
-//    	
-//    	//initialize Excel Driver
-//        oExcelDriver = new excelDriver();
-//        //Open Excel Sheet
-//    	oExcelDriver.openExcelSheet("D:\\selenium\\Framework\\InputData\\InputTestData.xlsx");
-//    	//Get browser type and URL
-//    	String browserType = oExcelDriver.getCellData(excelSheetName, 1, 2);
-//    	String sURL = oExcelDriver.getCellData(excelSheetName, 2, 2);
-//    	//initialize WebDiver and open browser    	
-//    	this.wDriver = driverGetter.getDriver(browserType);
-//    	//initialize Pagefactory
-//    	PageFactory.initElements(this.wDriver, this);
-//    	//initialize commonDriver
-//    	doMethod = new commonDriver(this.wDriver);
-//    	//open URL
-//    	doMethod.openURL(sURL);    	    	
-//    }
-    
-    
+   
     @Test
     public void OpenURL(){
     	String sURL ="http://demo.opensourcecms.com/wordpress/wp-login.php";
@@ -83,7 +60,7 @@ public class appWordPress3 {
     
 
     //Test case to log into the system. Priority 1 so that it will be the first one to be executed
-    @Test 
+    @Test (priority = 1)
     public boolean Login2() {
         try {        	
         	Log.info("Inside Login, getting username and password for login");
@@ -111,7 +88,14 @@ public class appWordPress3 {
         }        
     }
     
-        
+    @Test (priority = 2)
+    public boolean Logout(){
+    	doMethod.moveToElement(myAccountLink);
+    	doMethod.click(linkLogout);
+    	return false;
+    	
+    	
+    }
     public boolean isUserTextBoxDisplayed(){
     	return doMethod.isVisible(txtUsername);
     }
@@ -130,30 +114,6 @@ public class appWordPress3 {
     	return doMethod.getTitle();
     }
     
-    
-    
-    
-    
-//    @Test  (priority = 2)
-//    public void verifyPageTitle() {  	
-//    	
-//        Assert.assertEquals(doMethod.getTitle(),"Dashboard ‹ WordPress Demo Install — WordPress");
-//    }
-
-//    public String getPageTitle() {
-//        return doMethod.getTitle();
-//    }
-    
-    
-    
-    
-    
-//==========================================================================================================================================    
-//========================================================================================================================================== 
-//================================================= DATA PROVIDER SECTION ==================================================================   
-//==========================================================================================================================================
-//==========================================================================================================================================
-   
     
 
 }

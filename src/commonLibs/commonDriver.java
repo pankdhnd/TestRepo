@@ -49,7 +49,6 @@ public String getTitle(){
 	try {
 
 		return wDriver.getTitle();		
-
 	} catch (Exception e) {
 		System.out.println("Could not get title of curret page; here is some more detail: ");
 	    e.printStackTrace();
