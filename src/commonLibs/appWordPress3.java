@@ -38,8 +38,8 @@ public class appWordPress3 {
     @FindBy(linkText = "Home")
     private static WebElement linkHome;
 
-    @FindBy(linkText = "Howdy, admin")
-    private static WebElement welcomeText;
+    @FindBy(xpath = "//a[contains(text(),'Dashboard')]")
+    private static WebElement dashboardLink;
     
         
     public appWordPress3(WebDriver tempDriver) {
@@ -84,12 +84,11 @@ public class appWordPress3 {
 
     //Test case to log into the system. Priority 1 so that it will be the first one to be executed
     @Test 
-    public void Login2() {
+    public boolean Login2() {
         try {        	
         	Log.info("Inside Login, getting username and password for login");
         	String[] tempLoginData = new String[2];
-        	tempLoginData = dataProvider.getLoginDetails();
-        	System.out.println(tempLoginData[0]+" "+tempLoginData[1]);
+        	tempLoginData = dataProvider.getLoginDetails();        	
         	String userName = tempLoginData[0];
         	String passWord = tempLoginData[1];
 
@@ -101,28 +100,18 @@ public class appWordPress3 {
             doMethod.setText(txtUsername, userName);
             doMethod.setText(txtPassword, passWord);
             Log.info("clicking Login button");
-            doMethod.click(loginButton);                        
+            doMethod.click(loginButton);                     
             
-            WebDriverWait oWait = new WebDriverWait(wDriver, 60);
-            oWait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Howdy, admin")));
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-//            By oBy = (By)welcomeText;            
-//            doMethod.waitTillElementVisible(oBy, 60);
+            return doMethod.isVisible(dashboardLink);
+
             
         } catch (Exception e) {
-        	Log.debug(e.getMessage());            
+        	Log.debug(e.getMessage());    
+        	return false;
         }        
     }
     
+        
     public boolean isUserTextBoxDisplayed(){
     	return doMethod.isVisible(txtUsername);
     }

@@ -8,10 +8,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import projectUtility.Log;
 
 public class commonDriver {
 private static WebDriver wDriver = getWebDriver.wDriver;
@@ -165,8 +168,18 @@ public void openBrowser(String sBrowserType, String sURL) {
  } //END openBrowser
 //------------------------------------------------------------------------------------------------------------------------------------------------------//
 //------------------------------------------------------------------------------------------------------------------------------------------------------//
-
-
+public void moveToElement(WebElement Element) {
+	   try {
+		 By oBy = (By)Element;
+	    Actions action = new Actions(wDriver);
+	    action.moveToElement(wDriver.findElement(oBy)).build().perform();
+	   } catch (Exception e) {
+		   Log.error("Could not move to the specified element; here is some more detail:");
+		   Log.error(e.getStackTrace().toString());	    
+	   }
+	  }
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
 
 
 
